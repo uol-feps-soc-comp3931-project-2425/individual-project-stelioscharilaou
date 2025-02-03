@@ -46,3 +46,5 @@ Thumbs.db
 # Ignore personal and temporary files
 *.bak
 *.old
+
+/matlab/

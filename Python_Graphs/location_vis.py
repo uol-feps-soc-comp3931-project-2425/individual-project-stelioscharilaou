@@ -39,8 +39,8 @@ G.add_nodes_from(nodes.keys())
 G.add_edges_from(edges)
 
 # --- Read Simulation Log ---
-file_path = r"C:\Users\Stelios\OneDrive - University of Leeds\Year 3\FInal Project\EdgeCloudSim-master\sim_results\ite1\SIMRESULT_TWO_TIER_WITH_EO_ROUND_ROBIN_2DEVICES_LOCATION.log"
-df = pd.read_csv(file_path, delimiter=";", header=None)
+file_path = r"C:\Users\Stelios\OneDrive - University of Leeds\Year 3\FInal Project\individual-project-stelioscharilaou\EdgeCloudSim-master\sim_results\ite1\SIMRESULT_TWO_TIER_WITH_EO_ROUND_ROBIN_2DEVICES_LOCATION.log"
+df = pd.read_csv(file_path, delimiter=";", header=None, usecols=[0, 1, 2])
 df.columns = ["Time", "Device1_Location", "Device2_Location"]
 
 # --- Visualization ---

@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Define the log file path (Update this path if needed)
-log_file_path = r"C:\Users\Stelios\OneDrive - University of Leeds\Year 3\Final Project\EdgeCloudSim-master\sim_results\ite1\SIMRESULT_TWO_TIER_WITH_EO_ROUND_ROBIN_3DEVICES_ALL_APPS_GENERIC.log"
+log_file_path = r"C:\Users\Stelios\OneDrive - University of Leeds\Year 3\FInal Project\individual-project-stelioscharilaou\EdgeCloudSim-master\sim_results\ite1\SIMRESULT_TWO_TIER_WITH_EO_ROUND_ROBIN_3DEVICES_ALL_APPS_GENERIC.log"
 
 # Load the log file into a DataFrame (Skipping first auto-generated line)
 df = pd.read_csv(log_file_path, sep=";", header=None, skiprows=1)
