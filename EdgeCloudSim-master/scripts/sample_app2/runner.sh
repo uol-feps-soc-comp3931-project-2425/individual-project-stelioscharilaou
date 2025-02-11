@@ -2,6 +2,7 @@
 
 script_root_path="$(dirname "$(readlink -f "$0")")"
 simulation_out_folder=$1
+
 scenario_name=$2
 edge_devices_file=$3
 applications_file=$4

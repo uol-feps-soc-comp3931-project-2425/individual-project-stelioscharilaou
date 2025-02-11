@@ -21,7 +21,7 @@ function [] = plotGenericResult(rowOfset, columnOfset, yLabel, appType, calculat
             for j=1:numOfMobileDevices
                 try
                     mobileDeviceNumber = startOfMobileDeviceLoop + stepOfMobileDeviceLoop * (j-1);
-                    filePath = strcat(folderPath,'\ite',int2str(s),'\SIMRESULT_TWO_TIER_WITH_EO_',char(scenarioType(i)),'_',int2str(mobileDeviceNumber),'DEVICES_',appType,'_GENERIC.log');
+                    filePath = strcat(folderPath,'\ite',int2str(s),'\SIMRESULT_SINGLE_TIER_',char(scenarioType(i)),'_',int2str(mobileDeviceNumber),'DEVICES_',appType,'_GENERIC.log');
 
                     readData = dlmread(filePath,';',rowOfset,0);
                     value = readData(1,columnOfset);
@@ -41,7 +41,7 @@ function [] = plotGenericResult(rowOfset, columnOfset, yLabel, appType, calculat
 
                     all_results(s,i,j) = value;
                 catch err
-                    error(err)
+                    error(err.message)
                 end
             end
         end
@@ -69,7 +69,7 @@ function [] = plotGenericResult(rowOfset, columnOfset, yLabel, appType, calculat
             if(CI(2) < 0)
                 CI(2) = 0;
             end
-
+            
             min_results(i,j) = results(i,j) - CI(1);
             max_results(i,j) = CI(2) - results(i,j);
         end

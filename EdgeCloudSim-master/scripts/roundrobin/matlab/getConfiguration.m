@@ -1,22 +1,20 @@
 function [ret_val] = getConfiguration(argType)
     if(argType == 1)
-        ret_val = 'C:\Users\Stelios\OneDrive - University of Leeds\Year 3\FInal Project\EdgeCloudSim-master\sim_results';
+        ret_val = 'C:\Users\Stelios\OneDrive - University of Leeds\Year 3\FInal Project\individual-project-stelioscharilaou\EdgeCloudSim-master\sim_results';
     elseif(argType == 2)
         ret_val = 1; %Number of iterations
-    elseif(argType == 2)
-        ret_val = 2; % Min number of mobile devices (only 2)
     elseif(argType == 3)
-        ret_val = 3; % Min number of mobile devices (only 3)
+        ret_val = 5; %min number of mobile device
     elseif(argType == 4)
-        ret_val = 1; % Step size (not relevant, only 1 test runs)
+        ret_val = 5; %step size of mobile device count
     elseif(argType == 5)
-        ret_val = 3; % Max number of mobile devices (only 3)
+        ret_val =10; %max number of mobile device
     elseif(argType == 6)
         ret_val = 1; %xTickLabelCoefficient
     elseif(argType == 7)
-        ret_val = {'ROUND_ROBIN'}
+        ret_val = {'ROUND_ROBIN','UTILIZATION_BASED','NETWORK_BASED'};
     elseif(argType == 8)
-        ret_val = {'utilization','bw','hybrid'};
+        ret_val = {'round_robin','utilization','bw'};
     elseif(argType == 9)
         ret_val=[10 3 12 12]; %position of figure
     elseif(argType == 10)

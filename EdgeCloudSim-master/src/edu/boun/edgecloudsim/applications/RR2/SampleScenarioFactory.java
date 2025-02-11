@@ -17,7 +17,7 @@ import edu.boun.edgecloudsim.edge_client.MobileDeviceManager;
 import edu.boun.edgecloudsim.edge_client.mobile_processing_unit.DefaultMobileServerManager;
 import edu.boun.edgecloudsim.edge_client.mobile_processing_unit.MobileServerManager;
 import edu.boun.edgecloudsim.edge_orchestrator.EdgeOrchestrator;
-import edu.boun.edgecloudsim.edge_orchestrator.RoundRobinEdgeOrchestrator;
+import edu.boun.edgecloudsim.applications.RR2.RoundRobinEdgeOrchestrator;
 import edu.boun.edgecloudsim.edge_server.DefaultEdgeServerManager;
 import edu.boun.edgecloudsim.edge_server.EdgeServerManager;
 import edu.boun.edgecloudsim.mobility.MobilityModel;

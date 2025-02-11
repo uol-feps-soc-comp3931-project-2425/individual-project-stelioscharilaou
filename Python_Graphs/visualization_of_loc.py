@@ -1,4 +1,5 @@
 import os
+import re
 import numpy as np
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -6,32 +7,42 @@ import pandas as pd
 from matplotlib.widgets import Button
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
-# Attempt to use a nice style; if unavailable, fall back to ggplot
+# Attempt to use a nice style; if unavailable, fall back to ggplot.
 try:
     plt.style.use("seaborn-whitegrid")
 except OSError:
     plt.style.use("ggplot")
 
+# --- File Path & Device Count Determination ---
+file_path = r"C:\Users\Stelios\OneDrive - University of Leeds\Year 3\FInal Project\individual-project-stelioscharilaou\EdgeCloudSim-master\sim_results\ite1\SIMRESULT_SINGLE_TIER_ROUND_ROBIN_10DEVICES_SUCCESS.log"
+# Extract the number of devices from the file name (e.g. "5DEVICES" will yield 5).
+match = re.search(r"(\d+)devices", file_path, re.IGNORECASE)
+if match:
+    NUM_DEVICES = int(match.group(1))
+else:
+    NUM_DEVICES = 0  # Or set a default value
+
 # --- Read and Sort Simulation Log ---
-# Replace the file_path below with the actual path to your simulation log file.
-file_path = r"C:\Users\Stelios\OneDrive - University of Leeds\Year 3\FInal Project\individual-project-stelioscharilaou\EdgeCloudSim-master\sim_results\ite1\SIMRESULT_TWO_TIER_WITH_EO_ROUND_ROBIN_2DEVICES_SUCCESS.log"
 df = pd.read_csv(file_path, delimiter=";", header=None, skiprows=1, usecols=[0, 1, 2])
 df.columns = ["Time", "DeviceID", "EdgeNode"]
+# Force the DeviceID column to be integer type.
+df["DeviceID"] = df["DeviceID"].astype(int)
 df = df.sort_values(by=["Time"]).reset_index(drop=True)
 
-# --- Dynamic Detection of Devices and Edge Nodes ---
-# Determine unique device IDs and assign them a new sequential index.
-unique_device_ids = sorted(df["DeviceID"].unique())
+# --- Device Setup Using File Name ---
+# We ignore the simulation log’s device IDs and instead create devices 0..NUM_DEVICES-1.
+unique_device_ids = list(range(NUM_DEVICES))
 num_devices = len(unique_device_ids)
-# Map each device value to a sequential number: Device-1, Device-2, etc.
-device_id_map = {dev: idx + 1 for idx, dev in enumerate(unique_device_ids)}
+# Create a mapping: device 0 becomes Device-1, device 1 becomes Device-2, etc.
+device_id_map = {dev: dev + 1 for dev in unique_device_ids}
 
-# Determine unique edge node codes and map each code to a sequential name.
+# --- Dynamic Detection of Edge Nodes ---
+# Instead of mapping the edge codes to sequential indexes, we now use the actual code.
 unique_edge_codes = sorted(df["EdgeNode"].unique())
 num_edge_nodes = len(unique_edge_codes)
-edge_node_map = {
-    code: f"Edge-Node-{idx + 1}" for idx, code in enumerate(unique_edge_codes)
-}
+edge_node_map = {code: f"Edge-Node-{code}" for code in unique_edge_codes}
+# Create a corresponding mapping for local routers.
+local_router_map = {code: f"L-Router-{code}" for code in unique_edge_codes}
 
 # --- Network Topology Setup ---
 G = nx.DiGraph()
@@ -41,28 +52,26 @@ nodes = {}
 nodes["Internet"] = (0, 0)
 
 # --- Device-Specific Routers and Devices ---
-# Devices are placed evenly along the x-axis at y = -3.
+# Place devices evenly along the x-axis at y = -3.
 x_positions_devices = np.linspace(-3, 3, num=num_devices)
 device_names = [f"Device-{device_id_map[dev]}" for dev in unique_device_ids]
 for name, x in zip(device_names, x_positions_devices):
     nodes[name] = (x, -3)
 
-# For each device, create a unique router named R{n}-Router positioned directly above the device (y = -2).
+# For each device, create a unique router named R{n}-Router directly above the device (y = -2).
 device_router_names = [f"R{device_id_map[dev]}-Router" for dev in unique_device_ids]
 for name, x in zip(device_router_names, x_positions_devices):
     nodes[name] = (x, -2)
 
 # --- Local Routers and Edge Nodes (for the edge simulation) ---
-# Create local routers dynamically for each edge node.
-# They are named L-Router-1, L-Router-2, etc. and placed evenly along the x-axis at y = 1.
-local_router_names = [f"L-Router-{i}" for i in range(1, num_edge_nodes + 1)]
+# Create local routers for each edge code using the actual identifier.
+local_router_names = [local_router_map[code] for code in sorted(unique_edge_codes)]
 x_positions_local = np.linspace(-3, 3, num=num_edge_nodes)
 for name, x in zip(local_router_names, x_positions_local):
     nodes[name] = (x, 1)
 
-# Create edge nodes based on the simulation log.
-# These are positioned directly above their corresponding local router at y = 2.
-edge_node_names = [edge_node_map[code] for code in unique_edge_codes]
+# Create edge nodes based on the simulation log using the actual code.
+edge_node_names = [edge_node_map[code] for code in sorted(unique_edge_codes)]
 x_positions_edge = np.linspace(-3, 3, num=num_edge_nodes)
 for name, x in zip(edge_node_names, x_positions_edge):
     nodes[name] = (x, 2)
@@ -82,11 +91,12 @@ for local_router in local_router_names:
     G.add_edge("Internet", local_router)
 
 # Connect each local router to its corresponding edge node.
-for local_router, edge_node in zip(local_router_names, edge_node_names):
+for code in unique_edge_codes:
+    local_router = local_router_map[code]
+    edge_node = edge_node_map[code]
     G.add_edge(local_router, edge_node)
 
 # --- Load Images for Nodes ---
-# Update the image_dir as needed and ensure the following image files exist.
 image_dir = "images"
 node_image_paths = {
     "internet": os.path.join(image_dir, "internet.png"),
@@ -137,20 +147,21 @@ def draw_network(step_index):
     if 0 <= step_index < len(df):
         row = df.iloc[step_index]
         sim_time = row["Time"]
-        device_val = row["DeviceID"]
+        device_val = int(row["DeviceID"])  # Ensure device value is an integer.
         edge_code = row["EdgeNode"]
 
-        # Map the device value and edge code to node names.
-        device_name = f"Device-{device_id_map[device_val]}"
-        router_name = f"R{device_id_map[device_val]}-Router"
-        edge_node_name = edge_node_map.get(edge_code, None)
-
-        if device_name in pos:
-            path = [device_name, router_name, "Internet"]
-            if edge_node_name is not None:
-                # Determine the local router for the corresponding edge node.
-                local_router = "L-Router-" + edge_node_name.split("-")[-1]
-                path.extend([local_router, edge_node_name])
+        # Map the device value to node names.
+        if device_val not in device_id_map:
+            print(f"Device id {device_val} not in expected range from file name.")
+        else:
+            device_name = f"Device-{device_id_map[device_val]}"
+            router_name = f"R{device_id_map[device_val]}-Router"
+            # Use the edge code directly from the log.
+            if edge_code in edge_node_map:
+                # Build the simulation path: device -> device-specific router -> Internet -> local router -> edge node.
+                path = [device_name, router_name, "Internet"]
+                local_router = local_router_map[edge_code]
+                path.extend([local_router, edge_node_map[edge_code]])
 
     # Draw all edges in grey.
     nx.draw_networkx_edges(

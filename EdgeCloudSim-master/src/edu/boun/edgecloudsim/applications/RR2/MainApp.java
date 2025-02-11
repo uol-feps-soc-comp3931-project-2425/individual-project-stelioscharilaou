@@ -47,7 +47,7 @@ public class MainApp {
 			iterationNumber = Integer.parseInt(args[4]);
 		}
 		else{
-			SimLo		gger.printLine("Simulation setting file, output folder and iteration number are not provided! Using default ones...");
+			SimLogger.printLine("Simulation setting file, output folder and iteration number are not provided! Using default ones...");
 			configFile = "scripts/roundrobin/config/default_config.properties";
 			applicationsFile = "scripts/roundrobin/config/applications.xml";
 			edgeDevicesFile = "scripts/roundrobin/config/edge_devices.xml";
