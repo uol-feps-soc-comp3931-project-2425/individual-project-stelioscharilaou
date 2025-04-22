@@ -49,6 +49,9 @@ public class SampleScenarioFactory implements ScenarioFactory {
 
 	@Override
 	public EdgeOrchestrator getEdgeOrchestrator() {
+		if (orchestratorPolicy.equalsIgnoreCase("LeastLoaded")) {
+			return new LeastLoadedEdgeOrchestrator(orchestratorPolicy, simScenario);
+		}
 		return new RoundRobinEdgeOrchestrator(orchestratorPolicy, simScenario);
 	}
 

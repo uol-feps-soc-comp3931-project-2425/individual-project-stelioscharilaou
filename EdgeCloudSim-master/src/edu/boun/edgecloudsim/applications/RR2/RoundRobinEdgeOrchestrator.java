@@ -40,19 +40,19 @@ public class RoundRobinEdgeOrchestrator extends EdgeOrchestrator {
 	@Override
 	public int getDeviceToOffload(Task task) {
 		// Create a dummy task with predetermined upload and download file sizes.
-		Task dummyTask = new Task(0, 0, 0, 0, 128, 128,
-				new UtilizationModelFull(), new UtilizationModelFull(), new UtilizationModelFull());
+//		Task dummyTask = new Task(0, 0, 0, 0, 128, 128,
+//				new UtilizationModelFull(), new UtilizationModelFull(), new UtilizationModelFull());
 
 		// Use the dummy task to simulate network conditions.
-		double networkDelay = SimManager.getInstance().getNetworkModel()
-				.getUploadDelay(task.getMobileDeviceId(), SimSettings.GENERIC_EDGE_DEVICE_ID, dummyTask);
-		SimLogger.printLine("Simulated network delay for dummy task: " + networkDelay);
+//		double networkDelay = SimManager.getInstance().getNetworkModel()
+//				.getUploadDelay(task.getMobileDeviceId(), SimSettings.GENERIC_EDGE_DEVICE_ID, dummyTask);
+//		SimLogger.printLine("Simulated network delay for dummy task: " + networkDelay);
 
 		// As this orchestrator is intended to run on edge nodes only, use round robin to select an edge host.
 		int result = SimSettings.GENERIC_EDGE_DEVICE_ID + (currentHostIndex % numberOfHost);
 		currentHostIndex++; // Increment to point to the next host
 
-		SimLogger.printLine("Task assigned to edge device ID: " + result);
+//		SimLogger.printLine("Task assigned to edge device ID: " + result);
 		return result;
 	}
 
@@ -78,11 +78,11 @@ public class RoundRobinEdgeOrchestrator extends EdgeOrchestrator {
 			System.exit(0);
 		}
 
-		if (selectedVM != null) {
-			SimLogger.printLine("Task assigned to edge VM ID: " + selectedVM.getId());
-		} else {
-			SimLogger.printLine("No suitable VM found for the task on edge device: " + deviceId);
-		}
+//		if (selectedVM != null) {
+//			SimLogger.printLine("Task assigned to edge VM ID: " + selectedVM.getId());
+//		} else {
+//			SimLogger.printLine("No suitable VM found for the task on edge device: " + deviceId);
+//		}
 		return selectedVM;
 	}
 
