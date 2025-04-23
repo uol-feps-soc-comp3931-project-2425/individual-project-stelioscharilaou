@@ -378,50 +378,51 @@ public class SampleMobileDeviceManager extends MobileDeviceManager {
 				task.getAssociatedVmId(),
 				vmType.ordinal());
 	}
-	
-	private Task createTask(TaskProperty edgeTask){
-		UtilizationModel utilizationModel = new UtilizationModelFull(); /*UtilizationModelStochastic*/
-		UtilizationModel utilizationModelCPU = getCpuUtilizationModel();
 
-		// Define task complexity based on task type
-		int length, inputSize, outputSize;
-		switch (edgeTask.getTaskType()) {
-			case 0 -> { // Simple Task
-				length = 5000;
-				inputSize = 10;
-				outputSize = 5;
-			}
-			case 1 -> { // Medium Task
-				length = 15000;
-				inputSize = 50;
-				outputSize = 25;
-			}
-			case 2 -> { // Complex Task
-				length = 50000;
-				inputSize = 200;
-				outputSize = 100;
-			}
-			default -> {
-				length = 10000;
-				inputSize = 20;
-				outputSize = 10;
-			}
-		}
+	/**
+	 * Create a new Task for the given application properties,
+	 * classify it into high- or low-priority based on <delay_sensitivity>.
+	 *
+	 * @param edgeTask the TaskProperty read from applications.xml
+	 * @return a fully initialized Task with priority set
+	 */
+	private Task createTask(TaskProperty edgeTask) {
+		// basic utilization models
+		UtilizationModel cpuModel = getCpuUtilizationModel();
+		UtilizationModel ioModel  = new UtilizationModelFull();
 
+		// build the raw Task
+		Task task = new Task(
+				edgeTask.getMobileDeviceId(),
+				++taskIdCounter,
+				edgeTask.getLength(),
+				edgeTask.getPesNumber(),
+				edgeTask.getInputFileSize(),
+				edgeTask.getOutputFileSize(),
+				cpuModel,
+				ioModel,
+				ioModel
+		);
 
-		Task task = new Task(edgeTask.getMobileDeviceId(), ++taskIdCounter,
-				edgeTask.getLength(), edgeTask.getPesNumber(),
-				edgeTask.getInputFileSize(), edgeTask.getOutputFileSize(),
-				utilizationModelCPU, utilizationModel, utilizationModel);
-		
-		//set the owner of this task
+		// assign owner & type
 		task.setUserId(this.getId());
 		task.setTaskType(edgeTask.getTaskType());
-		
-		if (utilizationModelCPU instanceof CpuUtilizationModel_Custom) {
-			((CpuUtilizationModel_Custom)utilizationModelCPU).setTask(task);
+
+		// ————————————————
+		// NEW: priority classification
+		// index 12 in the table is <delay_sensitivity>
+		double delaySens = SimSettings.getInstance()
+				.getTaskLookUpTable()[edgeTask.getTaskType()][12];
+		// threshold 0.9 => high priority (1), else low (0)
+		int prio = (delaySens >= 0.9) ? 1 : 0;
+		task.setPriority(prio);
+		// ————————————————
+
+		// hook the CPU model if it needs a reference back to the Task
+		if (cpuModel instanceof CpuUtilizationModel_Custom) {
+			((CpuUtilizationModel_Custom)cpuModel).setTask(task);
 		}
-		
+
 		return task;
 	}
 }

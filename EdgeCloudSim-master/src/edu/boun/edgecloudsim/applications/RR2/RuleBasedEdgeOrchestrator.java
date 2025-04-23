@@ -38,7 +38,7 @@ public class RuleBasedEdgeOrchestrator extends EdgeOrchestrator {
      */
     @Override
     public int getDeviceToOffload(Task task) {
-        boolean highPriority = (task.getTaskType() == 2);
+        boolean highPriority = (task.getPriority() == 1);
         if (highPriority) {
             var mob = SimManager.getInstance().getMobilityModel();
             var devLoc = mob.getLocation(task.getMobileDeviceId(), CloudSim.clock());
@@ -75,7 +75,7 @@ public class RuleBasedEdgeOrchestrator extends EdgeOrchestrator {
     public Vm getVmToOffload(Task task, int deviceId) {
         int hostIdx = deviceId - SimSettings.GENERIC_EDGE_DEVICE_ID;
         List<EdgeVM> vms = SimManager.getInstance().getEdgeServerManager().getVmList(hostIdx);
-        if (task.getTaskType()==2) {
+        if (task.getPriority()==1) {
             // reserve first two VMs
             EdgeVM vm1 = vms.size()>0 ? vms.get(0) : null;
             EdgeVM vm2 = vms.size()>1 ? vms.get(1) : null;
