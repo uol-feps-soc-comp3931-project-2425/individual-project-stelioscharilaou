@@ -43,8 +43,8 @@ public class LeastLoadedEdgeOrchestrator extends EdgeOrchestrator {
             double totalHostUtilization = 0;
 
             // Calculate total utilization for all VMs on this host
-            for(int vmIndex = 0; vmIndex < vmArray.size(); vmIndex++) {
-                totalHostUtilization += vmArray.get(vmIndex).getCloudletScheduler()
+            for (EdgeVM edgeVM : vmArray) {
+                totalHostUtilization += edgeVM.getCloudletScheduler()
                         .getTotalUtilizationOfCpu(CloudSim.clock());
             }
 
@@ -63,7 +63,6 @@ public class LeastLoadedEdgeOrchestrator extends EdgeOrchestrator {
 //        if(selectedDeviceCapacity > 80) { // 80% utilization threshold
 //            result = SimSettings.CLOUD_DATACENTER_ID;
 //        }
-
         return result;
     }
 

@@ -52,6 +52,9 @@ public class SampleScenarioFactory implements ScenarioFactory {
 		if (orchestratorPolicy.equalsIgnoreCase("LeastLoaded")) {
 			return new LeastLoadedEdgeOrchestrator(orchestratorPolicy, simScenario);
 		}
+		if (orchestratorPolicy.equalsIgnoreCase("RuleBased")) {
+			return new RuleBasedEdgeOrchestrator(orchestratorPolicy, simScenario);
+		}
 		return new RoundRobinEdgeOrchestrator(orchestratorPolicy, simScenario);
 	}
 
@@ -62,7 +65,7 @@ public class SampleScenarioFactory implements ScenarioFactory {
 
 	@Override
 	public NetworkModel getNetworkModel() {
-		return new SampleNetworkModel(numOfMobileDevice, simScenario);
+		return new CustomNetworkModel(numOfMobileDevice, simScenario);
 	}
 
 	@Override

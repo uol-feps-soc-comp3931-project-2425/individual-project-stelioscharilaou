@@ -35,6 +35,7 @@ import edu.boun.edgecloudsim.edge_client.MobileDeviceManager;
 import edu.boun.edgecloudsim.edge_client.Task;
 import edu.boun.edgecloudsim.edge_server.EdgeHost;
 import edu.boun.edgecloudsim.edge_server.EdgeVM;
+import edu.boun.edgecloudsim.network.MM1Queue;
 import edu.boun.edgecloudsim.network.NetworkModel;
 import edu.boun.edgecloudsim.utils.Location;
 import edu.boun.edgecloudsim.utils.SimLogger;
@@ -180,9 +181,10 @@ public class SampleMobileDeviceManager extends MobileDeviceManager {
 		switch (ev.getTag()) {
 			case UPDATE_MM1_QUEUE_MODEL:
 			{
-				((SampleNetworkModel)networkModel).updateMM1QueeuModel();
-				schedule(getId(), MM1_QUEUE_MODEL_UPDATE_INTEVAL, UPDATE_MM1_QUEUE_MODEL);
-	
+				if (networkModel instanceof MM1Queue) {
+					// Schedule next update
+					schedule(getId(), MM1_QUEUE_MODEL_UPDATE_INTEVAL, UPDATE_MM1_QUEUE_MODEL);
+				}
 				break;
 			}
 			case REQUEST_RECEIVED_BY_CLOUD:
