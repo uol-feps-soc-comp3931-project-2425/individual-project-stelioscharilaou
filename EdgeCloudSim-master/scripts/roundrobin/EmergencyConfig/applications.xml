@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<applications>
+	<!-- Critical emergency alerts -->
+	<application name="EMERGENCY_ALERT">
+		<usage_percentage>60</usage_percentage>
+		<prob_cloud_selection>5</prob_cloud_selection>
+		<poisson_interarrival>2</poisson_interarrival> <!-- every 2 s avg -->
+		<delay_sensitivity>0.99</delay_sensitivity>
+		<active_period>55</active_period>
+		<idle_period>5</idle_period>
+		<data_upload>2048</data_upload>
+		<data_download>512</data_download>
+		<task_length>8000</task_length>
+		<required_core>4</required_core>
+		<vm_utilization_on_edge>30</vm_utilization_on_edge>
+		<vm_utilization_on_cloud>15</vm_utilization_on_cloud>
+		<vm_utilization_on_mobile>0</vm_utilization_on_mobile>
+	</application>
+
+	<!-- Burst‐driven video frame analysis -->
+	<application name="VIDEO_SURVEILLANCE">
+		<usage_percentage>40</usage_percentage>
+		<prob_cloud_selection>15</prob_cloud_selection>
+		<poisson_interarrival>0.5</poisson_interarrival> <!-- 2 frames/s avg -->
+		<delay_sensitivity>0.90</delay_sensitivity>
+		<active_period>30</active_period>
+		<idle_period>30</idle_period>
+		<data_upload>4096</data_upload>
+		<data_download>1024</data_download>
+		<task_length>20000</task_length>
+		<required_core>4</required_core>
+		<vm_utilization_on_edge>60</vm_utilization_on_edge>
+		<vm_utilization_on_cloud>20</vm_utilization_on_cloud>
+		<vm_utilization_on_mobile>0</vm_utilization_on_mobile>
+	</application>
+</applications>

@@ -39,9 +39,9 @@ public class MainApp {
 		}
 		else{
 			SimLogger.printLine("Simulation setting file, output folder and iteration number are not provided! Using default ones...");
-			configFile = "scripts/roundrobin/config/default_config.properties";
-			applicationsFile = "scripts/roundrobin/config/applications.xml";
-			edgeDevicesFile = "scripts/roundrobin/config/edge_devices.xml";
+			configFile = "scripts/roundrobin/ManufacturingConfig/default_config.properties";
+			applicationsFile = "scripts/roundrobin/ManufacturingConfig/applications.xml";
+			edgeDevicesFile = "scripts/roundrobin/ManufacturingConfig/edge_devices.xml";
 			outputFolder = "sim_results/ite" + iterationNumber;
 		}
 
