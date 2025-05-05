@@ -1,8 +1,11 @@
 package edu.boun.edgecloudsim.applications.RR2;
 
+import edu.boun.edgecloudsim.core.SimManager;
 import edu.boun.edgecloudsim.edge_client.Task;
+import edu.boun.edgecloudsim.edge_server.EdgeHost;
 import edu.boun.edgecloudsim.network.MM1Queue;
 import edu.boun.edgecloudsim.core.SimSettings;
+import edu.boun.edgecloudsim.utils.Location;
 import org.cloudbus.cloudsim.core.CloudSim;
 import java.util.ArrayList;
 import java.util.List;
@@ -73,41 +76,78 @@ public class CustomNetworkModel extends MM1Queue {
         return burstWindows.stream().anyMatch(w -> now >= w[0] && now <= w[1]);
     }
 
-    @Override
-    public double getUploadDelay(int src, int dst, Task task) {
-        // constant LAN if local
-        if (src == dst && src == SimSettings.GENERIC_EDGE_DEVICE_ID) {
-            return lanDelay;
-        }
-
-        double size = task.getCloudletFileSize() + task.getCloudletOutputSize();
-        return calculateDelay(dst, size);
+    private boolean isMobileDevice(int deviceId) {
+        return deviceId >= 0 && deviceId < SimSettings.getInstance().getMaxNumOfMobileDev();
     }
 
 
     @Override
-    public double getDownloadDelay(int src, int dst, Task task) {
-        if (src == dst && src == SimSettings.GENERIC_EDGE_DEVICE_ID) {
-            return lanDelay;
+    public double getUploadDelay(int sourceDeviceId, int destDeviceId, Task task) {
+        double delay = 0;
+
+        if (isMobileDevice(sourceDeviceId)) {
+            Location accessPointLocation = SimManager.getInstance()
+                    .getMobilityModel()
+                    .getLocation(sourceDeviceId, CloudSim.clock());
+
+            if (destDeviceId == SimSettings.CLOUD_DATACENTER_ID) {
+                double wlanDelay = super.getUploadDelay(sourceDeviceId, destDeviceId, task);
+                double wanDelay = getWanUploadDelay(accessPointLocation, CloudSim.clock() + wlanDelay);
+                if (wlanDelay > 0 && wanDelay > 0)
+                    delay = wlanDelay + wanDelay;
+            }
+            else if (destDeviceId == SimSettings.EDGE_ORCHESTRATOR_ID) {
+                delay = super.getUploadDelay(sourceDeviceId, destDeviceId, task) +
+                        SimSettings.getInstance().getInternalLanDelay();
+            }
+            else if (destDeviceId == SimSettings.GENERIC_EDGE_DEVICE_ID) {
+                delay = super.getUploadDelay(sourceDeviceId, destDeviceId, task);
+            }
         }
 
-        double size = task.getCloudletOutputSize();
-        return calculateDelay(src, size);
+        return delay;
     }
 
-    private double calculateDelay(int dst, double size) {
-        double transmission = size / wlanBandwidth;
-        double totalDelay = lanDelay + transmission;
 
-        if (dst == SimSettings.CLOUD_DATACENTER_ID) {
-            totalDelay += wanDelay;
+    @Override
+    public double getDownloadDelay(int sourceDeviceId, int destDeviceId, Task task) {
+        if (sourceDeviceId == SimSettings.EDGE_ORCHESTRATOR_ID &&
+                destDeviceId == SimSettings.GENERIC_EDGE_DEVICE_ID) {
+            return SimSettings.getInstance().getInternalLanDelay();
         }
 
-        if (isEmergencyBurst()) {
-            totalDelay += rng.nextDouble(50, 100) / 1000.0;
+        double delay = 0;
+
+        if (isMobileDevice(destDeviceId)) {
+            Location accessPointLocation = SimManager.getInstance()
+                    .getMobilityModel()
+                    .getLocation(destDeviceId, CloudSim.clock());
+
+            if (sourceDeviceId == SimSettings.CLOUD_DATACENTER_ID) {
+                double wlanDelay = super.getDownloadDelay(sourceDeviceId, destDeviceId, task);
+                double wanDelay = getWanDownloadDelay(accessPointLocation, CloudSim.clock() + wlanDelay);
+                if (wlanDelay > 0 && wanDelay > 0)
+                    delay = wlanDelay + wanDelay;
+            }
+            else {
+                delay = super.getDownloadDelay(sourceDeviceId, destDeviceId, task);
+
+                EdgeHost host = (EdgeHost)(SimManager.getInstance()
+                        .getEdgeServerManager()
+                        .getDatacenterList()
+                        .get(sourceDeviceId)
+                        .getHostList()
+                        .get(0));
+
+                if (host.getLocation().getServingWlanId() != accessPointLocation.getServingWlanId()) {
+                    delay += SimSettings.getInstance().getInternalLanDelay() * 2;
+                }
+            }
         }
-        return totalDelay;
+
+        return delay;
     }
+
 
     private boolean isEmergencyBurst() {
         return (simScenario.startsWith("EMERGENCY" ) || simScenario.equals("VIDEO_SURVEILLANCE"))
