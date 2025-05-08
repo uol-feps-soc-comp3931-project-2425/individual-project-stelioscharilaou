@@ -1,0 +1,537 @@
+No arguments provided. Loading from active_config/...
+MAN bandwidth set to: 1000000 kbps
+Simulation started at 07/05/2025 04:15:11
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:15:11
+Scenario: EMERGENCY_RESPONSE - Policy: ROUND_ROBIN - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 20
+Creating tasks...Done, 
+Creating device locations...Done.
+Initialised Round Robin Orchestrator with 5 edge hosts.
+=== VALIDATION ===
+ Scenario       : EMERGENCY_RESPONSE
+ Orchestrator   : ROUND_ROBIN
+ # Devices      : 20
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 5
+ # Edge Hosts   : 5
+ VMs per host   : 8
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=500 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+EMERGENCY_ALERT
+# of tasks (Edge/Cloud): 0(0/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 0(0/0)
+---------------------------------------
+VIDEO_SURVEILLANCE
+# of tasks (Edge/Cloud): 32500(32500/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 32500(32500/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 32500(32500/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 0(0/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 32500(32500/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 11(11/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 0/0/0(0/0/0/0)
+percentage of failed tasks: 0.000000%
+average service time: 0.774141 seconds. (on Edge: 0.774141, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.765614 seconds. (on Edge: 0.765614, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.008528 seconds. (LAN delay: 0.004683, MAN delay: 0.004813, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 19.297659/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:15:14. It took 3 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:15:14
+Scenario: EMERGENCY_RESPONSE - Policy: LeastLoaded - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 20
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : EMERGENCY_RESPONSE
+ Orchestrator   : LeastLoaded
+ # Devices      : 20
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 5
+ # Edge Hosts   : 5
+ VMs per host   : 8
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=500 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+EMERGENCY_ALERT
+# of tasks (Edge/Cloud): 712(712/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 712(712/0)
+---------------------------------------
+VIDEO_SURVEILLANCE
+# of tasks (Edge/Cloud): 30550(30550/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 30550(30550/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 31262(31262/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 0(0/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 31262(31262/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 13(13/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 0/0/0(0/0/0/0)
+percentage of failed tasks: 0.000000%
+average service time: 0.672269 seconds. (on Edge: 0.672269, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.662474 seconds. (on Edge: 0.662474, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.009795 seconds. (LAN delay: 0.005356, MAN delay: 0.005570, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 15.883779/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:15:16. It took 2 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:15:16
+Scenario: EMERGENCY_RESPONSE - Policy: RuleBased - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 20
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : EMERGENCY_RESPONSE
+ Orchestrator   : RuleBased
+ # Devices      : 20
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 5
+ # Edge Hosts   : 5
+ VMs per host   : 8
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=500 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+EMERGENCY_ALERT
+# of tasks (Edge/Cloud): 2180(2180/0)
+# of failed tasks (Edge/Cloud): 1(1/0)
+# of completed tasks (Edge/Cloud): 2179(2179/0)
+---------------------------------------
+VIDEO_SURVEILLANCE
+# of tasks (Edge/Cloud): 27422(27422/0)
+# of failed tasks (Edge/Cloud): 2(2/0)
+# of completed tasks (Edge/Cloud): 27420(27420/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 29602(29602/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 3(3/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 29599(29599/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 10(10/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 3/0/0(0/0/0/0)
+percentage of failed tasks: 0.010134%
+average service time: 0.761561 seconds. (on Edge: 0.761561, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.752879 seconds. (on Edge: 0.752879, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.008682 seconds. (LAN delay: 0.004861, MAN delay: 0.005150, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 17.173913/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:15:18. It took 2 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:15:18
+Scenario: EMERGENCY_RESPONSE - Policy: ROUND_ROBIN - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 40
+Creating tasks...Done, 
+Creating device locations...Done.
+Initialised Round Robin Orchestrator with 5 edge hosts.
+=== VALIDATION ===
+ Scenario       : EMERGENCY_RESPONSE
+ Orchestrator   : ROUND_ROBIN
+ # Devices      : 40
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 5
+ # Edge Hosts   : 5
+ VMs per host   : 8
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=500 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+EMERGENCY_ALERT
+# of tasks (Edge/Cloud): 3611(3611/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 3611(3611/0)
+---------------------------------------
+VIDEO_SURVEILLANCE
+# of tasks (Edge/Cloud): 56782(56782/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 56782(56782/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 60393(60393/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 0(0/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 60393(60393/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 12(12/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 0/0/0(0/0/0/0)
+percentage of failed tasks: 0.000000%
+average service time: 0.998903 seconds. (on Edge: 0.998903, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.989121 seconds. (on Edge: 0.989121, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.009782 seconds. (LAN delay: 0.005325, MAN delay: 0.005576, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 44.663043/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:15:24. It took 5 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:15:24
+Scenario: EMERGENCY_RESPONSE - Policy: LeastLoaded - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 40
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : EMERGENCY_RESPONSE
+ Orchestrator   : LeastLoaded
+ # Devices      : 40
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 5
+ # Edge Hosts   : 5
+ VMs per host   : 8
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=500 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+EMERGENCY_ALERT
+# of tasks (Edge/Cloud): 2102(2102/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 2102(2102/0)
+---------------------------------------
+VIDEO_SURVEILLANCE
+# of tasks (Edge/Cloud): 60142(60142/0)
+# of failed tasks (Edge/Cloud): 3(3/0)
+# of completed tasks (Edge/Cloud): 60139(60139/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 62244(62244/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 3(3/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 62241(62241/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 24(24/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 3/0/0(0/0/0/0)
+percentage of failed tasks: 0.004820%
+average service time: 0.703449 seconds. (on Edge: 0.703449, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.694345 seconds. (on Edge: 0.694345, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.009105 seconds. (LAN delay: 0.004941, MAN delay: 0.005189, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 32.237458/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:15:30. It took 6 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:15:30
+Scenario: EMERGENCY_RESPONSE - Policy: RuleBased - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 40
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : EMERGENCY_RESPONSE
+ Orchestrator   : RuleBased
+ # Devices      : 40
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 5
+ # Edge Hosts   : 5
+ VMs per host   : 8
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=500 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+EMERGENCY_ALERT
+# of tasks (Edge/Cloud): 2152(2152/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 2152(2152/0)
+---------------------------------------
+VIDEO_SURVEILLANCE
+# of tasks (Edge/Cloud): 59509(59509/0)
+# of failed tasks (Edge/Cloud): 6(6/0)
+# of completed tasks (Edge/Cloud): 59503(59503/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 61661(61661/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 6(6/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 61655(61655/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 41(41/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 6/0/0(0/0/0/0)
+percentage of failed tasks: 0.009731%
+average service time: 1.481549 seconds. (on Edge: 1.481549, on Cloud: NaN, on Mobile: NaN)
+average processing time: 1.471752 seconds. (on Edge: 1.471752, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.009797 seconds. (LAN delay: 0.005392, MAN delay: 0.005700, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 69.091137/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:15:37. It took 6 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:15:37
+Scenario: EMERGENCY_RESPONSE - Policy: ROUND_ROBIN - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 60
+Creating tasks...Done, 
+Creating device locations...Done.
+Initialised Round Robin Orchestrator with 5 edge hosts.
+=== VALIDATION ===
+ Scenario       : EMERGENCY_RESPONSE
+ Orchestrator   : ROUND_ROBIN
+ # Devices      : 60
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 5
+ # Edge Hosts   : 5
+ VMs per host   : 8
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=500 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+EMERGENCY_ALERT
+# of tasks (Edge/Cloud): 3555(3555/0)
+# of failed tasks (Edge/Cloud): 1(1/0)
+# of completed tasks (Edge/Cloud): 3554(3554/0)
+---------------------------------------
+VIDEO_SURVEILLANCE
+# of tasks (Edge/Cloud): 88820(88820/0)
+# of failed tasks (Edge/Cloud): 6(6/0)
+# of completed tasks (Edge/Cloud): 88814(88814/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 92375(92375/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 7(7/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 92368(92368/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 159(158/0/1)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 7/0/0(0/0/0/0)
+percentage of failed tasks: 0.007578%
+average service time: 2.059737 seconds. (on Edge: 2.059737, on Cloud: NaN, on Mobile: NaN)
+average processing time: 2.049050 seconds. (on Edge: 2.049050, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.010687 seconds. (LAN delay: 0.005801, MAN delay: 0.006092, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 147.084448/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:15:50. It took 13 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:15:50
+Scenario: EMERGENCY_RESPONSE - Policy: LeastLoaded - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 60
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : EMERGENCY_RESPONSE
+ Orchestrator   : LeastLoaded
+ # Devices      : 60
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 5
+ # Edge Hosts   : 5
+ VMs per host   : 8
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=500 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+EMERGENCY_ALERT
+# of tasks (Edge/Cloud): 3593(3593/0)
+# of failed tasks (Edge/Cloud): 18(18/0)
+# of completed tasks (Edge/Cloud): 3575(3575/0)
+---------------------------------------
+VIDEO_SURVEILLANCE
+# of tasks (Edge/Cloud): 89413(89413/0)
+# of failed tasks (Edge/Cloud): 938(938/0)
+# of completed tasks (Edge/Cloud): 88475(88475/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 93006(93006/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 956(956/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 92050(92050/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 52(52/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 949(949/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 7/0/0(0/0/0/0)
+percentage of failed tasks: 1.027891%
+average service time: 0.778041 seconds. (on Edge: 0.778041, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.767864 seconds. (on Edge: 0.767864, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.010177 seconds. (LAN delay: 0.005499, MAN delay: 0.005848, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 54.233278/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:16:03. It took 12 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:16:03
+Scenario: EMERGENCY_RESPONSE - Policy: RuleBased - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 60
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : EMERGENCY_RESPONSE
+ Orchestrator   : RuleBased
+ # Devices      : 60
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 5
+ # Edge Hosts   : 5
+ VMs per host   : 8
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=500 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+EMERGENCY_ALERT
+# of tasks (Edge/Cloud): 5055(5055/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 5055(5055/0)
+---------------------------------------
+VIDEO_SURVEILLANCE
+# of tasks (Edge/Cloud): 85447(85447/0)
+# of failed tasks (Edge/Cloud): 16(16/0)
+# of completed tasks (Edge/Cloud): 85431(85431/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 90502(90502/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 16(16/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 90486(90486/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 381(381/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 16/0/0(0/0/0/0)
+percentage of failed tasks: 0.017679%
+average service time: 3.568803 seconds. (on Edge: 3.568803, on Cloud: NaN, on Mobile: NaN)
+average processing time: 3.558484 seconds. (on Edge: 3.558484, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.010319 seconds. (LAN delay: 0.005697, MAN delay: 0.006087, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 250.142140/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:16:14. It took 11 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:16:14
+Scenario: EMERGENCY_RESPONSE - Policy: ROUND_ROBIN - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 80
+Creating tasks...Done, 
+Creating device locations...Done.
+Initialised Round Robin Orchestrator with 5 edge hosts.
+=== VALIDATION ===
+ Scenario       : EMERGENCY_RESPONSE
+ Orchestrator   : ROUND_ROBIN
+ # Devices      : 80
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 5
+ # Edge Hosts   : 5
+ VMs per host   : 8
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=500 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+EMERGENCY_ALERT
+# of tasks (Edge/Cloud): 5734(5734/0)
+# of failed tasks (Edge/Cloud): 5(5/0)
+# of completed tasks (Edge/Cloud): 5729(5729/0)
+---------------------------------------
+VIDEO_SURVEILLANCE
+# of tasks (Edge/Cloud): 115376(115376/0)
+# of failed tasks (Edge/Cloud): 46(46/0)
+# of completed tasks (Edge/Cloud): 115330(115330/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 121110(121110/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 51(51/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 121059(121059/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 738(738/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 51/0/0(0/0/0/0)
+percentage of failed tasks: 0.042110%
+average service time: 6.807842 seconds. (on Edge: 6.807842, on Cloud: NaN, on Mobile: NaN)
+average processing time: 6.795249 seconds. (on Edge: 6.795249, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.012593 seconds. (LAN delay: 0.006829, MAN delay: 0.007215, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 616.918060/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:16:40. It took 26 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:16:40
+Scenario: EMERGENCY_RESPONSE - Policy: LeastLoaded - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 80
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : EMERGENCY_RESPONSE
+ Orchestrator   : LeastLoaded
+ # Devices      : 80
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 5
+ # Edge Hosts   : 5
+ VMs per host   : 8
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=500 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+EMERGENCY_ALERT
+# of tasks (Edge/Cloud): 6336(6336/0)
+# of failed tasks (Edge/Cloud): 319(319/0)
+# of completed tasks (Edge/Cloud): 6017(6017/0)
+---------------------------------------
+VIDEO_SURVEILLANCE
+# of tasks (Edge/Cloud): 115611(115611/0)
+# of failed tasks (Edge/Cloud): 10301(10301/0)
+# of completed tasks (Edge/Cloud): 105310(105310/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 121947(121947/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 10620(10620/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 111327(111327/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 51(48/0/3)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 10605(10605/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 15/0/0(0/0/0/0)
+percentage of failed tasks: 8.708701%
+average service time: 0.883315 seconds. (on Edge: 0.883315, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.869663 seconds. (on Edge: 0.869663, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.013652 seconds. (LAN delay: 0.007417, MAN delay: 0.007788, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 73.622910/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:16:59. It took 18 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:16:59
+Scenario: EMERGENCY_RESPONSE - Policy: RuleBased - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 80
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : EMERGENCY_RESPONSE
+ Orchestrator   : RuleBased
+ # Devices      : 80
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 5
+ # Edge Hosts   : 5
+ VMs per host   : 8
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=500 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+EMERGENCY_ALERT
+# of tasks (Edge/Cloud): 6443(6443/0)
+# of failed tasks (Edge/Cloud): 2(2/0)
+# of completed tasks (Edge/Cloud): 6441(6441/0)
+---------------------------------------
+VIDEO_SURVEILLANCE
+# of tasks (Edge/Cloud): 104393(104393/0)
+# of failed tasks (Edge/Cloud): 1004(1004/0)
+# of completed tasks (Edge/Cloud): 103389(103389/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 110836(110836/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 1006(1006/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 109830(109830/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 10362(10362/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 1006/0/0(0/0/0/0)
+percentage of failed tasks: 0.907647%
+average service time: 59.273421 seconds. (on Edge: 59.273421, on Cloud: NaN, on Mobile: NaN)
+average processing time: 59.261113 seconds. (on Edge: 59.261113, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.012307 seconds. (LAN delay: 0.006771, MAN delay: 0.007288, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 6659.104515/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:24:05. It took 7 Minutes 6 Seconds
+----------------------------------------------------------------------
+Simulation finished at 07/05/2025 04:24:05. It took 8 Minutes 54 Seconds
