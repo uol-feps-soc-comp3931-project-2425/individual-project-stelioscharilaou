@@ -1,0 +1,537 @@
+No arguments provided. Loading from active_config/...
+MAN bandwidth set to: 10000000 kbps
+Simulation started at 07/05/2025 04:04:17
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:04:17
+Scenario: AUTONOMOUS_DRIVING - Policy: ROUND_ROBIN - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 20
+Creating tasks...Done, 
+Creating device locations...Done.
+Initialised Round Robin Orchestrator with 4 edge hosts.
+=== VALIDATION ===
+ Scenario       : AUTONOMOUS_DRIVING
+ Orchestrator   : ROUND_ROBIN
+ # Devices      : 20
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 4
+ # Edge Hosts   : 4
+ VMs per host   : 4
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=5000 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+AUTONOMOUS_PERCEPTION
+# of tasks (Edge/Cloud): 16175(16175/0)
+# of failed tasks (Edge/Cloud): 2(2/0)
+# of completed tasks (Edge/Cloud): 16173(16173/0)
+---------------------------------------
+ROUTE_PLANNING
+# of tasks (Edge/Cloud): 1719(1719/0)
+# of failed tasks (Edge/Cloud): 1(1/0)
+# of completed tasks (Edge/Cloud): 1718(1718/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 17894(17894/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 3(3/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 17891(17891/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 6(6/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 3/0/0(0/0/0/0)
+percentage of failed tasks: 0.016765%
+average service time: 0.290631 seconds. (on Edge: 0.290631, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.275699 seconds. (on Edge: 0.275699, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.014932 seconds. (LAN delay: 0.009250, MAN delay: 0.009552, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 7.713211/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:04:18. It took 1 Second
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:04:18
+Scenario: AUTONOMOUS_DRIVING - Policy: LeastLoaded - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 20
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : AUTONOMOUS_DRIVING
+ Orchestrator   : LeastLoaded
+ # Devices      : 20
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 4
+ # Edge Hosts   : 4
+ VMs per host   : 4
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=5000 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+AUTONOMOUS_PERCEPTION
+# of tasks (Edge/Cloud): 13727(13727/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 13727(13727/0)
+---------------------------------------
+ROUTE_PLANNING
+# of tasks (Edge/Cloud): 2124(2124/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 2124(2124/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 15851(15851/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 0(0/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 15851(15851/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 4(4/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 0/0/0(0/0/0/0)
+percentage of failed tasks: 0.000000%
+average service time: 0.325059 seconds. (on Edge: 0.325059, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.311498 seconds. (on Edge: 0.311498, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.013561 seconds. (LAN delay: 0.008967, MAN delay: 0.008958, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 7.863712/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:04:20. It took 1 Second
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:04:20
+Scenario: AUTONOMOUS_DRIVING - Policy: RuleBased - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 20
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : AUTONOMOUS_DRIVING
+ Orchestrator   : RuleBased
+ # Devices      : 20
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 4
+ # Edge Hosts   : 4
+ VMs per host   : 4
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=5000 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+AUTONOMOUS_PERCEPTION
+# of tasks (Edge/Cloud): 16312(16312/0)
+# of failed tasks (Edge/Cloud): 1(1/0)
+# of completed tasks (Edge/Cloud): 16311(16311/0)
+---------------------------------------
+ROUTE_PLANNING
+# of tasks (Edge/Cloud): 1733(1733/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 1733(1733/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 18045(18045/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 1(1/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 18044(18044/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 4(4/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 1/0/0(0/0/0/0)
+percentage of failed tasks: 0.005542%
+average service time: 0.281361 seconds. (on Edge: 0.281361, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.271747 seconds. (on Edge: 0.271747, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.009614 seconds. (LAN delay: 0.009185, MAN delay: 0.006151, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 7.441472/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:04:21. It took 1 Second
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:04:21
+Scenario: AUTONOMOUS_DRIVING - Policy: ROUND_ROBIN - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 40
+Creating tasks...Done, 
+Creating device locations...Done.
+Initialised Round Robin Orchestrator with 4 edge hosts.
+=== VALIDATION ===
+ Scenario       : AUTONOMOUS_DRIVING
+ Orchestrator   : ROUND_ROBIN
+ # Devices      : 40
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 4
+ # Edge Hosts   : 4
+ VMs per host   : 4
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=5000 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+AUTONOMOUS_PERCEPTION
+# of tasks (Edge/Cloud): 32463(32463/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 32463(32463/0)
+---------------------------------------
+ROUTE_PLANNING
+# of tasks (Edge/Cloud): 3468(3468/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 3468(3468/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 35931(35931/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 0(0/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 35931(35931/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 10(10/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 0/0/0(0/0/0/0)
+percentage of failed tasks: 0.000000%
+average service time: 0.286801 seconds. (on Edge: 0.286801, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.268922 seconds. (on Edge: 0.268922, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.017879 seconds. (LAN delay: 0.010761, MAN delay: 0.011299, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 15.033445/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:04:23. It took 2 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:04:23
+Scenario: AUTONOMOUS_DRIVING - Policy: LeastLoaded - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 40
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : AUTONOMOUS_DRIVING
+ Orchestrator   : LeastLoaded
+ # Devices      : 40
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 4
+ # Edge Hosts   : 4
+ VMs per host   : 4
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=5000 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+AUTONOMOUS_PERCEPTION
+# of tasks (Edge/Cloud): 39029(39029/0)
+# of failed tasks (Edge/Cloud): 2(2/0)
+# of completed tasks (Edge/Cloud): 39027(39027/0)
+---------------------------------------
+ROUTE_PLANNING
+# of tasks (Edge/Cloud): 2371(2371/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 2371(2371/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 41400(41400/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 2(2/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 41398(41398/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 7(7/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 2/0/0(0/0/0/0)
+percentage of failed tasks: 0.004831%
+average service time: 0.288664 seconds. (on Edge: 0.288664, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.270249 seconds. (on Edge: 0.270249, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.018415 seconds. (LAN delay: 0.011347, MAN delay: 0.011962, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 17.830268/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:04:27. It took 3 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:04:27
+Scenario: AUTONOMOUS_DRIVING - Policy: RuleBased - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 40
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : AUTONOMOUS_DRIVING
+ Orchestrator   : RuleBased
+ # Devices      : 40
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 4
+ # Edge Hosts   : 4
+ VMs per host   : 4
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=5000 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+AUTONOMOUS_PERCEPTION
+# of tasks (Edge/Cloud): 41689(41689/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 41689(41689/0)
+---------------------------------------
+ROUTE_PLANNING
+# of tasks (Edge/Cloud): 2028(2028/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 2028(2028/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 43717(43717/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 0(0/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 43717(43717/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 8(8/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 0/0/0(0/0/0/0)
+percentage of failed tasks: 0.000000%
+average service time: 0.278353 seconds. (on Edge: 0.278353, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.267835 seconds. (on Edge: 0.267835, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.010518 seconds. (LAN delay: 0.009926, MAN delay: 0.008854, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 18.555602/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:04:30. It took 3 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:04:30
+Scenario: AUTONOMOUS_DRIVING - Policy: ROUND_ROBIN - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 60
+Creating tasks...Done, 
+Creating device locations...Done.
+Initialised Round Robin Orchestrator with 4 edge hosts.
+=== VALIDATION ===
+ Scenario       : AUTONOMOUS_DRIVING
+ Orchestrator   : ROUND_ROBIN
+ # Devices      : 60
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 4
+ # Edge Hosts   : 4
+ VMs per host   : 4
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=5000 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+AUTONOMOUS_PERCEPTION
+# of tasks (Edge/Cloud): 59599(59599/0)
+# of failed tasks (Edge/Cloud): 4(4/0)
+# of completed tasks (Edge/Cloud): 59595(59595/0)
+---------------------------------------
+ROUTE_PLANNING
+# of tasks (Edge/Cloud): 3528(3528/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 3528(3528/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 63127(63127/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 4(4/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 63123(63123/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 15(12/0/3)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 4/0/0(0/0/0/0)
+percentage of failed tasks: 0.006336%
+average service time: 0.287820 seconds. (on Edge: 0.287820, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.264418 seconds. (on Edge: 0.264418, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.023402 seconds. (LAN delay: 0.014000, MAN delay: 0.014721, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 27.259615/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:04:37. It took 6 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:04:37
+Scenario: AUTONOMOUS_DRIVING - Policy: LeastLoaded - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 60
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : AUTONOMOUS_DRIVING
+ Orchestrator   : LeastLoaded
+ # Devices      : 60
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 4
+ # Edge Hosts   : 4
+ VMs per host   : 4
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=5000 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+AUTONOMOUS_PERCEPTION
+# of tasks (Edge/Cloud): 55313(55313/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 55313(55313/0)
+---------------------------------------
+ROUTE_PLANNING
+# of tasks (Edge/Cloud): 4089(4089/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 4089(4089/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 59402(59402/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 0(0/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 59402(59402/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 5(5/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 0/0/0(0/0/0/0)
+percentage of failed tasks: 0.000000%
+average service time: 0.301641 seconds. (on Edge: 0.301641, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.279776 seconds. (on Edge: 0.279776, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.021865 seconds. (LAN delay: 0.013245, MAN delay: 0.014059, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 26.881271/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:04:43. It took 6 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:04:43
+Scenario: AUTONOMOUS_DRIVING - Policy: RuleBased - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 60
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : AUTONOMOUS_DRIVING
+ Orchestrator   : RuleBased
+ # Devices      : 60
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 4
+ # Edge Hosts   : 4
+ VMs per host   : 4
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=5000 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+AUTONOMOUS_PERCEPTION
+# of tasks (Edge/Cloud): 54764(54764/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 54764(54764/0)
+---------------------------------------
+ROUTE_PLANNING
+# of tasks (Edge/Cloud): 4308(4308/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 4308(4308/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 59072(59072/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 0(0/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 59072(59072/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 14(14/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 0/0/0(0/0/0/0)
+percentage of failed tasks: 0.000000%
+average service time: 0.295541 seconds. (on Edge: 0.295541, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.283094 seconds. (on Edge: 0.283094, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.012447 seconds. (LAN delay: 0.010843, MAN delay: 0.010772, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 25.691890/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:04:48. It took 5 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:04:48
+Scenario: AUTONOMOUS_DRIVING - Policy: ROUND_ROBIN - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 80
+Creating tasks...Done, 
+Creating device locations...Done.
+Initialised Round Robin Orchestrator with 4 edge hosts.
+=== VALIDATION ===
+ Scenario       : AUTONOMOUS_DRIVING
+ Orchestrator   : ROUND_ROBIN
+ # Devices      : 80
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 4
+ # Edge Hosts   : 4
+ VMs per host   : 4
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=5000 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+AUTONOMOUS_PERCEPTION
+# of tasks (Edge/Cloud): 78535(78535/0)
+# of failed tasks (Edge/Cloud): 4(4/0)
+# of completed tasks (Edge/Cloud): 78531(78531/0)
+---------------------------------------
+ROUTE_PLANNING
+# of tasks (Edge/Cloud): 4743(4743/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 4743(4743/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 83278(83278/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 4(4/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 83274(83274/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 21(18/0/3)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 4/0/0(0/0/0/0)
+percentage of failed tasks: 0.004803%
+average service time: 0.301819 seconds. (on Edge: 0.301819, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.273599 seconds. (on Edge: 0.273599, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.028220 seconds. (LAN delay: 0.017130, MAN delay: 0.017818, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 35.288462/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:05:01. It took 12 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:05:01
+Scenario: AUTONOMOUS_DRIVING - Policy: LeastLoaded - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 80
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : AUTONOMOUS_DRIVING
+ Orchestrator   : LeastLoaded
+ # Devices      : 80
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 4
+ # Edge Hosts   : 4
+ VMs per host   : 4
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=5000 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+AUTONOMOUS_PERCEPTION
+# of tasks (Edge/Cloud): 81252(81252/0)
+# of failed tasks (Edge/Cloud): 29(29/0)
+# of completed tasks (Edge/Cloud): 81223(81223/0)
+---------------------------------------
+ROUTE_PLANNING
+# of tasks (Edge/Cloud): 4351(4351/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 4351(4351/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 85603(85603/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 29(29/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 85574(85574/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 24(23/0/1)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 26(26/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 3/0/0(0/0/0/0)
+percentage of failed tasks: 0.033877%
+average service time: 0.332293 seconds. (on Edge: 0.332293, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.300918 seconds. (on Edge: 0.300918, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.031376 seconds. (LAN delay: 0.018604, MAN delay: 0.019486, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 39.475334/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:05:13. It took 12 Seconds
+----------------------------------------------------------------------
+Scenario started at 07/05/2025 04:05:13
+Scenario: AUTONOMOUS_DRIVING - Policy: RuleBased - #iteration: 1
+Duration: 30.0 min (warm up period: 3.0 min) - #devices: 80
+Creating tasks...Done, 
+Creating device locations...Done.
+=== VALIDATION ===
+ Scenario       : AUTONOMOUS_DRIVING
+ Orchestrator   : RuleBased
+ # Devices      : 80
+ Simulation     : 1800.0 s   (warm-up: 180.0 s)
+ # Edge DCs     : 4
+ # Edge Hosts   : 4
+ VMs per host   : 4
+ Network delays : LAN=0.005 s   WAN=0.100 s   WLAN-BW=5000 kbps
+==================
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+AUTONOMOUS_PERCEPTION
+# of tasks (Edge/Cloud): 80045(80045/0)
+# of failed tasks (Edge/Cloud): 7(7/0)
+# of completed tasks (Edge/Cloud): 80038(80038/0)
+---------------------------------------
+ROUTE_PLANNING
+# of tasks (Edge/Cloud): 4595(4595/0)
+# of failed tasks (Edge/Cloud): 0(0/0)
+# of completed tasks (Edge/Cloud): 4595(4595/0)
+---------------------------------------
+# of tasks (Edge/Cloud/Mobile): 84640(84640/0/0)
+# of failed tasks (Edge/Cloud/Mobile): 7(7/0/0)
+# of completed tasks (Edge/Cloud/Mobile): 84633(84633/0/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 24(24/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/WLAN Range/Network(WLAN/MAN/WAN/GSM): 7/0/0(0/0/0/0)
+percentage of failed tasks: 0.008270%
+average service time: 0.439984 seconds. (on Edge: 0.439984, on Cloud: NaN, on Mobile: NaN)
+average processing time: 0.426852 seconds. (on Edge: 0.426852, on Cloud: NaN, on Mobile: NaN)
+average network delay: 0.013133 seconds. (LAN delay: 0.012215, MAN delay: 0.011349, WAN delay: NaN, GSM delay: NaN)
+average server utilization Edge/Cloud/Mobile: 54.496237/0.000000/0.000000
+average cost: 0.0$
+average overhead: 0.0 ns
+average QoE (for all): 0.0%
+average QoE (for executed): 0.0%
+Scenario finished at 07/05/2025 04:05:23. It took 10 Seconds
+----------------------------------------------------------------------
+Simulation finished at 07/05/2025 04:05:23. It took 1 Minute 6 Seconds

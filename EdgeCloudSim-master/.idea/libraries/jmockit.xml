@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jmockit" type="repository">
+    <properties maven-id="org.jmockit:jmockit:1.49" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jmockit/jmockit/1.49/jmockit-1.49.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
