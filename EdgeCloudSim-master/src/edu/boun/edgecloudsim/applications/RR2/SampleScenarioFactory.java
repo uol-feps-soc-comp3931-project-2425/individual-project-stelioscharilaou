@@ -79,7 +79,7 @@ public class SampleScenarioFactory implements ScenarioFactory {
 
 	@Override
 	public MobileDeviceManager getMobileDeviceManager() throws Exception {
-		return new SampleMobileDeviceManager();
+		return new CustomMobileDeviceManager();
 	}
 
 	@Override

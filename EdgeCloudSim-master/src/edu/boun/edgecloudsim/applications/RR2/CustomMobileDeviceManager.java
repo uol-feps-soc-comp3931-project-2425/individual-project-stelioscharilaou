@@ -47,7 +47,7 @@ import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.core.CloudSimTags;
 import org.cloudbus.cloudsim.core.SimEvent;
 
-public class SampleMobileDeviceManager extends MobileDeviceManager {
+public class CustomMobileDeviceManager extends MobileDeviceManager {
 	private static final int BASE = 100000; //start from base in order not to conflict cloudsim tag!
 	
 	private static final int UPDATE_MM1_QUEUE_MODEL = BASE + 1;
@@ -62,7 +62,7 @@ public class SampleMobileDeviceManager extends MobileDeviceManager {
 	
 	private int taskIdCounter=0;
 	
-	public SampleMobileDeviceManager() throws Exception{
+	public CustomMobileDeviceManager() throws Exception{
 	}
 
 	@Override
@@ -213,7 +213,7 @@ public class SampleMobileDeviceManager extends MobileDeviceManager {
 			{
 				Task task = (Task) ev.getData();
 				networkModel.uploadFinished(task.getSubmittedLocation(), SimSettings.GENERIC_EDGE_DEVICE_ID);
-				
+
 				double manDelay =  networkModel.getUploadDelay(SimSettings.GENERIC_EDGE_DEVICE_ID, SimSettings.GENERIC_EDGE_DEVICE_ID, task);
 				if(manDelay>0){
 					networkModel.uploadStarted(task.getSubmittedLocation(), SimSettings.GENERIC_EDGE_DEVICE_ID+1);

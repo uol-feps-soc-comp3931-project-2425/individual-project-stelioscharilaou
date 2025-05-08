@@ -8,6 +8,7 @@ import edu.boun.edgecloudsim.utils.SimUtils;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.core.CloudSim;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -37,13 +38,25 @@ public class MainApp {
 			outputFolder = args[3];
 			iterationNumber = Integer.parseInt(args[4]);
 		}
-		else{
-			SimLogger.printLine("Simulation setting file, output folder and iteration number are not provided! Using default ones...");
-			configFile = "scripts/roundrobin/ManufacturingConfig/default_config.properties";
-			applicationsFile = "scripts/roundrobin/ManufacturingConfig/applications.xml";
-			edgeDevicesFile = "scripts/roundrobin/ManufacturingConfig/edge_devices.xml";
+		else {
+			SimLogger.printLine("No arguments provided. Loading from active_config/...");
+			configFile = "active_config/default_config.properties";
+			edgeDevicesFile = "active_config/edge_devices.xml";
+			applicationsFile = "active_config/applications.xml";
 			outputFolder = "sim_results/ite" + iterationNumber;
+
+			// Explicitly create the output directory if it doesn't exist
+			File outputDir = new File(outputFolder);
+			if (!outputDir.exists()) {
+				if (outputDir.mkdirs()) {
+					SimLogger.printLine("Output folder created: " + outputFolder);
+				} else {
+					SimLogger.printLine("Failed to create output folder: " + outputFolder);
+					System.exit(1);
+				}
+			}
 		}
+
 
 		//load settings from configuration file
 		SimSettings SS = SimSettings.getInstance();
@@ -92,6 +105,8 @@ public class MainApp {
 
 						// Generate EdgeCloudsim Scenario Factory
 						ScenarioFactory sampleFactory = new SampleScenarioFactory(j,SS.getSimulationTime(), orchestratorPolicy, simScenario);
+
+						SimLogger.setMetadata(simScenario, orchestratorPolicy);
 
 						// Generate EdgeCloudSim Simulation Manager
 						SimManager manager = new SimManager(sampleFactory, j, simScenario, orchestratorPolicy);
