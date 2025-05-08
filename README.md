@@ -11,6 +11,9 @@ The work is built on **EdgeCloudSim**, extended with new scheduling policies, mo
 | **Python_Graphs/** | Lightweight Python scripts used to generate the graphs used in the dissertation report. |
 | **Dissertation_results.xlsx** | A single spreadsheet that collects the summarised results from all simulation runs and find the mean values for all the iterations |
 | **EdgeCloudSim‑master/scripts/roundrobin/** | In this folder the different configuration files are located and the runner shell file. |
+| **EdgeCloudSim‑master/simulation_results/** | Output directory containing the results of every scenario and all their iterations. |
+| **EdgeCloudSim‑master/src/edu/boun/edgecloudsim/applications/RR2** | Contains all the orchestrator and extended modules needed to run the simulator |
+| **EdgeCloudSim‑master/src/edu/boun/edgecloudsim/applications/RR2/tests/** | JUnit test suite validating the new scheduling components and helper classes. |
 
 # Make the runner script executable (first time only)
 chmod +x EdgeCloudSim-master/scripts/roundrobin/runner.sh
