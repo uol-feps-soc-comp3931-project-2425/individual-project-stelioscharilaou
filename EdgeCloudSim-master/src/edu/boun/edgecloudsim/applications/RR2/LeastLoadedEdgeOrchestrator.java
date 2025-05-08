@@ -12,8 +12,6 @@ import org.cloudbus.cloudsim.Vm;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.core.SimEvent;
 import edu.boun.edgecloudsim.cloud_server.CloudVM;
-import edu.boun.edgecloudsim.edge_server.EdgeVM;
-import edu.boun.edgecloudsim.cloud_server.CloudVM;
 import edu.boun.edgecloudsim.edge_client.mobile_processing_unit.MobileVM;
 
 import java.util.List;

@@ -19,16 +19,52 @@
 				<storage>400000</storage>
 				<VMs>
 					<VM vmm="Xen">
-						<core>4</core>
+						<core>2</core>
 						<mips>20000</mips>
-						<ram>4000</ram>
-						<storage>100000</storage>
+						<ram>2000</ram>
+						<storage>50000</storage>
 					</VM>
-					<VM vmm="Xen">
-						<core>4</core>
+					<VM vmm="Xen1">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen2">
+						<core>2</core>
 						<mips>20000</mips>
-						<ram>4000</ram>
-						<storage>100000</storage>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen3">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen4">
+						<core>2</core>
+						<mips>20000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen5">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen6">
+						<core>2</core>
+						<mips>20000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen7">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
 					</VM>
 				</VMs>
 			</host>
@@ -54,16 +90,52 @@
 				<storage>400000</storage>
 				<VMs>
 					<VM vmm="Xen">
-						<core>4</core>
+						<core>2</core>
 						<mips>20000</mips>
-						<ram>4000</ram>
-						<storage>100000</storage>
+						<ram>2000</ram>
+						<storage>50000</storage>
 					</VM>
-					<VM vmm="Xen">
-						<core>4</core>
+					<VM vmm="Xen1">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen2">
+						<core>2</core>
 						<mips>20000</mips>
-						<ram>4000</ram>
-						<storage>100000</storage>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen3">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen4">
+						<core>2</core>
+						<mips>20000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen5">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen6">
+						<core>2</core>
+						<mips>20000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen7">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
 					</VM>
 				</VMs>
 			</host>
@@ -89,16 +161,52 @@
 				<storage>400000</storage>
 				<VMs>
 					<VM vmm="Xen">
-						<core>4</core>
+						<core>2</core>
 						<mips>20000</mips>
-						<ram>4000</ram>
-						<storage>100000</storage>
+						<ram>2000</ram>
+						<storage>50000</storage>
 					</VM>
-					<VM vmm="Xen">
-						<core>4</core>
+					<VM vmm="Xen1">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen2">
+						<core>2</core>
 						<mips>20000</mips>
-						<ram>4000</ram>
-						<storage>100000</storage>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen3">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen4">
+						<core>2</core>
+						<mips>20000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen5">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen6">
+						<core>2</core>
+						<mips>20000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen7">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
 					</VM>
 				</VMs>
 			</host>
@@ -124,16 +232,52 @@
 				<storage>400000</storage>
 				<VMs>
 					<VM vmm="Xen">
-						<core>4</core>
+						<core>2</core>
 						<mips>20000</mips>
-						<ram>4000</ram>
-						<storage>100000</storage>
+						<ram>2000</ram>
+						<storage>50000</storage>
 					</VM>
-					<VM vmm="Xen">
-						<core>4</core>
+					<VM vmm="Xen1">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen2">
+						<core>2</core>
 						<mips>20000</mips>
-						<ram>4000</ram>
-						<storage>100000</storage>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen3">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen4">
+						<core>2</core>
+						<mips>20000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen5">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen6">
+						<core>2</core>
+						<mips>20000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen7">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
 					</VM>
 				</VMs>
 			</host>
@@ -159,16 +303,52 @@
 				<storage>400000</storage>
 				<VMs>
 					<VM vmm="Xen">
-						<core>4</core>
+						<core>2</core>
 						<mips>20000</mips>
-						<ram>4000</ram>
-						<storage>100000</storage>
+						<ram>2000</ram>
+						<storage>50000</storage>
 					</VM>
-					<VM vmm="Xen">
-						<core>4</core>
+					<VM vmm="Xen1">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen2">
+						<core>2</core>
 						<mips>20000</mips>
-						<ram>4000</ram>
-						<storage>100000</storage>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen3">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen4">
+						<core>2</core>
+						<mips>20000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen5">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen6">
+						<core>2</core>
+						<mips>20000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
+					</VM>
+					<VM vmm="Xen7">
+						<core>2</core>
+						<mips>10000</mips>
+						<ram>2000</ram>
+						<storage>50000</storage>
 					</VM>
 				</VMs>
 			</host>

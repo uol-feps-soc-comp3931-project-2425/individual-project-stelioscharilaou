@@ -17,7 +17,6 @@ import edu.boun.edgecloudsim.edge_client.MobileDeviceManager;
 import edu.boun.edgecloudsim.edge_client.mobile_processing_unit.DefaultMobileServerManager;
 import edu.boun.edgecloudsim.edge_client.mobile_processing_unit.MobileServerManager;
 import edu.boun.edgecloudsim.edge_orchestrator.EdgeOrchestrator;
-import edu.boun.edgecloudsim.applications.RR2.RoundRobinEdgeOrchestrator;
 import edu.boun.edgecloudsim.edge_server.DefaultEdgeServerManager;
 import edu.boun.edgecloudsim.edge_server.EdgeServerManager;
 import edu.boun.edgecloudsim.mobility.MobilityModel;
@@ -27,10 +26,10 @@ import edu.boun.edgecloudsim.task_generator.IdleActiveLoadGenerator;
 import edu.boun.edgecloudsim.task_generator.LoadGeneratorModel;
 
 public class SampleScenarioFactory implements ScenarioFactory {
-	private int numOfMobileDevice;
-	private double simulationTime;
-	private String orchestratorPolicy;
-	private String simScenario;
+	private final int numOfMobileDevice;
+	private final double simulationTime;
+	private final String orchestratorPolicy;
+	private final String simScenario;
 	
 	SampleScenarioFactory(int _numOfMobileDevice,
 			double _simulationTime,
@@ -80,7 +79,7 @@ public class SampleScenarioFactory implements ScenarioFactory {
 
 	@Override
 	public MobileDeviceManager getMobileDeviceManager() throws Exception {
-		return new SampleMobileDeviceManager();
+		return new CustomMobileDeviceManager();
 	}
 
 	@Override
