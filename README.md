@@ -10,5 +10,10 @@ The work is built on **EdgeCloudSim**, extended with new scheduling policies, mo
 | **EdgeCloudSim‑master/** | The complete, final state of the simulator including custom Java classes for the Round‑Robin, Least‑Loaded and Hybrid orchestrators, the scenario factory, and modified network and mobility modules. |
 | **Python_Graphs/** | Lightweight Python scripts used to generate the graphs used in the dissertation report. |
 | **Dissertation_results.xlsx** | A single spreadsheet that collects the summarised results from all simulation runs and find the mean values for all the iterations |
+| **EdgeCloudSim‑master/scripts/roundrobin/** | In this folder the different configuration files are located and the runner shell file. |
 
+# Make the runner script executable (first time only)
+chmod +x EdgeCloudSim-master/scripts/roundrobin/runner.sh
 
+# Run the final simulation used in the dissertation
+./EdgeCloudSim-master/scripts/roundrobin/runner.sh
