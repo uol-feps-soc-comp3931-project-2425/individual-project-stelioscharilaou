@@ -1,26 +1,6 @@
 /*
- * Title:        EdgeCloudSim - Mobile Device Manager
- * 
- * Description: 
- * Mobile Device Manager is one of the most important component
- * in EdgeCloudSim. It is responsible for creating the tasks,
- * submitting them to the related VM with respect to the
- * Edge Orchestrator decision, and takes proper actions when
- * the execution of the tasks are finished. It also feeds the
- * SimLogger with the relevant results.
-
- * SampleMobileDeviceManager sends tasks to the edge servers or
- * cloud servers. The mobile devices use WAN if the tasks are
- * offloaded to the edge servers. On the other hand, they use WLAN
- * if the target server is an edge server. Finally, the mobile
- * devices use MAN if they must be served by a remote edge server
- * due to the congestion at their own location. In this case,
- * they access the edge server via two hops where the packets
- * must go through WLAN and MAN.
- * 
- * If you want to use different topology, you should modify
- * the flow implemented in this class.
- * 
+ * Title:        EdgeCloudSim - Custom Mobile Device Manager
+ *
  * Licence:      GPL - http://www.gnu.org/copyleft/gpl.html
  * Copyright (c) 2017, Bogazici University, Istanbul, Turkey
  */

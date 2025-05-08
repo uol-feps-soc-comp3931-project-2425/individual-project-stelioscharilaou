@@ -1,3 +1,9 @@
+/*
+ *
+ * Licence:      GPL - http://www.gnu.org/copyleft/gpl.html
+ * Copyright (c) 2017, Bogazici University, Istanbul, Turkey
+ */
+
 package edu.boun.edgecloudsim.applications.RR2;
 
 import java.util.List;
